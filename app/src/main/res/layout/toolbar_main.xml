@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="@dimen/toolbar_height" />
+
+        <Button
+            android:id="@+id/supported_btn"
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:background="@color/colorPrimaryDark"
+            android:foreground="@drawable/yes"
+            android:foregroundTint="@color/good">
+
+        </Button>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="@dimen/toolbar_height" />
+
+        <Button
+            android:id="@+id/toggle_bluetooth_btn"
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:background="@color/colorPrimaryDark"
+            android:foreground="@drawable/bluetooth"
+            android:foregroundTint="@color/good">
+
+        </Button>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="@dimen/toolbar_height" />
+
+        <Button
+            android:id="@+id/logs_btn"
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/logs_btn"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+
+        android:src="@drawable/settings"
+        android:tint="@android:color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.96">
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <View
+        android:id="@+id/fab_menu_view"
+        android:layout_width="@dimen/menu_height"
+        android:layout_height="@dimen/menu_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
